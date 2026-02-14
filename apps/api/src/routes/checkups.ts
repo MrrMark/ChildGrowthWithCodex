@@ -28,7 +28,13 @@ export function checkupRoutes(childGrowthService: ChildGrowthService) {
       const { childId } = childIdParamSchema.parse(request.params);
       await childGrowthService.getChildByIdOrThrow(childId);
 
-      const uploadedFile = await request.file();
+      let uploadedFile;
+      try {
+        uploadedFile = await request.file();
+      } catch {
+        throw new BadRequestError("multipart/form-data 형식의 file 업로드가 필요합니다.");
+      }
+
       if (!uploadedFile) {
         throw new BadRequestError("업로드할 파일이 없습니다.");
       }
