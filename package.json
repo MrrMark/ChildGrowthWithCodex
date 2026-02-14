@@ -1,0 +1,16 @@
+{
+  "name": "child-growth-codex",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run -w @child-growth/shared build && npm run -w @child-growth/api build",
+    "dev:api": "npm run -w @child-growth/api dev",
+    "dev:mobile": "npm run -w @child-growth/mobile start",
+    "test": "npm run -w @child-growth/api test",
+    "verify:db": "bash scripts/integration-db-check.sh"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Child Growth",
+    "slug": "child-growth",
+    "scheme": "child-growth",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#f2f6ff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#f2f6ff"
+      }
+    }
+  }
+}
